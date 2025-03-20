@@ -1,0 +1,369 @@
+/* место для кода*/
+
+.body {
+  position: relative;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1480px;
+  min-height: 134px;
+  padding: 0 120px;
+  background-color: #4fadf7;
+  background-image: url(../images/background-header.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.body__header {
+  margin: 0 auto;
+}
+
+.header__menu {
+  min-width: 390px;
+}
+
+.header__links-list {
+  display: flex;
+  justify-items: start;
+  justify-content: space-between;
+  min-width: 540px;
+  min-height: 60px;
+  list-style: none;
+}
+
+.header__link {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.header__logo {
+  display: block;
+  width: 167px;
+  height: 53px;
+  margin: 0;
+  padding: 0;
+}
+
+.header__logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1480px;
+  min-height: 600px;
+  padding: 40px 120px;
+  background-color: #4fadf7;
+  background-image: url(../images/waves.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+}
+
+.body__cover {
+  margin: 0 auto;
+}
+
+.cover__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cover__title {
+  width: 100%;
+  color: #fff;
+  font-family: Comfortaa, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 130%;
+}
+
+.cover__description-text {
+  max-width: 570px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 160%;
+  text-align: left;
+}
+
+.cover__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 330px;
+  padding: 0 0 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 167%;
+  text-align: left;
+  list-style: none;
+}
+
+.cover__list-item {
+  height: 50px;
+  padding: 0 0 0 67px;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.cover__list-item-tasty {
+  background-image: url(../images/smiling.svg);
+}
+
+.cover__list-item-vitamin {
+  background-image: url(../images/vitamin-c.svg);
+}
+
+.cover__list-item-chemistry {
+  background-image: url(../images/molecule.svg);
+}
+
+.cover__image {
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-company {
+  max-width: 1480px;
+  padding: 86px 120px 0;
+}
+
+.body__about-company {
+  margin: 0 auto;
+}
+
+.about-company__info {
+  display: flex;
+  justify-content: space-between;
+  min-height: 532px;
+}
+
+.about-company__mission {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url(../images/Noris_orange.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 392px;
+}
+
+.about-company__header {
+  color: #000;
+  font-family: Comfortaa, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  font-style: normal;
+  line-height: 50px;
+}
+
+.about-company__description {
+  max-width: 556px;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 160%;
+}
+
+.about-company__description_orange {
+  max-width: 586px;
+  height: 360px;
+  border-radius: 10px;
+  padding: 38px 70px;
+  color: #f5f5f5;
+  background-color: #ed8738;
+}
+
+.about-company__extra-info {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 80px 32px 60px;
+  color: #f5f5f5;
+  background-color: #94cf40;
+}
+
+.about-company__video {
+  width: 565px;
+  height: 313px;
+  border-radius: 10px;
+  box-shadow: 22px -27px #ffbf00;
+}
+
+.products {
+  max-width: 1480px;
+  min-height: 700px;
+  padding: 86px 120px 0;
+  background-image: url(../images/waves2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body__products {
+  margin: 0 auto;
+}
+
+.products__header {
+  color: #000;
+  font-family: Comfortaa, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  font-style: normal;
+  line-height: 50px;
+  width: 1200px;
+}
+
+.products__list {
+  list-style: none;
+}
+
+.products__list-group {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.products__group-name {
+  font-family: Comfortaa;
+  font-weight: bold;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 133%;
+  text-transform: uppercase;
+  padding: 50px 0 0;
+}
+
+.product-card {
+  height: 320px;
+  font-size: 18px;
+  line-height: 139%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card__image {
+  height: 270px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.advantages {
+  position: relative;
+  z-index: -2;
+  max-width: 1480px;
+  min-height: 926px;
+  padding: 82px 120px 0;
+  background-image: url(../images/waves3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body__advantages {
+  margin: 0 auto;
+}
+
+.advantages__overlay {
+  position: absolute;
+  z-index: -1;
+  width: calc(100% - 240px);
+  height: calc(100% - 82px);
+  background-image: url(../images/noris_group.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages__header {
+  color: #000;
+  font-family: Comfortaa, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  font-style: normal; 
+  line-height: 50px;
+}
+
+.advantages__list {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(2, 1fr);
+  height: 715px;
+  padding: 46px 0 0;
+}
+
+.advantages__list-item {
+  max-width: 320px;
+}
+
+.advantages__list-item:nth-child(2n){
+  justify-self: end;
+}
+
+.advantages__list-item:nth-child(4n+3),.advantages__list-item:nth-child(4n+4){
+  align-self: end;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1480px;
+  padding: 0 50px;
+}
+
+.body__footer {
+  margin: 0 auto;
+}
+
+.address {
+  max-width: 244px;
+  padding: 3px 0 0;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 136%;
+}
+
+.address__link {
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+}
+
+.footer__social-list {
+  display: flex;
+  justify-content: space-between;
+  min-width: 240px;
+  list-style: none;
+}
+
+.footer__social-list-item {
+  width: 48px;
+  height: 48px;
+}
