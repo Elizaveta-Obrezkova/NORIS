@@ -5,6 +5,47 @@
   background-color: #fff;
 }
 
+.text-accent__color_international-orange {
+  color: #FF530E
+}
+
+.text-accent__color_selective-yellow {
+  color: #FEBC00
+}
+
+.text-accent__color_dark-lime {
+  color: #01AF00
+}
+
+.text-accent__color_pure-blue {
+  color: #009DE2
+}
+
+.text-accent__color_moderate-red {
+  color: #CF5935
+}
+
+.text-accent__color_vivid-orange {
+  color: #EF9C1D
+}
+
+.text-accent__color_bright-orange {
+  color: #ED8738
+}
+
+.text-accent__color_pale-blue {
+  color: #A4BCFF
+}
+
+.text-accent__color_moderate-green {
+  color: #94CF40
+}
+
+.text-accent__color_soft-blue {
+  color: #4FADF7
+}
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -314,7 +355,7 @@
   display: grid;
   list-style: none;
   grid-template-columns: repeat(2, 1fr);
-  height: 715px;
+  min-height: 761px;
   padding: 46px 0 0;
 }
 
@@ -324,21 +365,45 @@
 
 .advantages__list-item:nth-child(2n){
   justify-self: end;
+  max-width: 300px;
 }
 
 .advantages__list-item:nth-child(4n+3),.advantages__list-item:nth-child(4n+4){
   align-self: end;
 }
 
+.advantages__heading {
+font-family: 'Comfortaa';
+font-style: normal;
+font-weight: bold;
+font-size: 23px;
+line-height: 139%;
+padding: 0 80px 0 0;
+}
+
+.advantages__description {
+font-weight: 400;
+font-size: 16px;
+line-height: 200%;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   max-width: 1480px;
-  padding: 0 50px;
+  padding: 82px 120px 0;
 }
 
 .body__footer {
   margin: 0 auto;
+}
+
+.footer__header {
+  font-family: Comfortaa, sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  font-style: normal; 
+  line-height: 52px;
 }
 
 .address {
