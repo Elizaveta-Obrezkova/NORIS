@@ -1,8 +1,0 @@
-@font-face {
-  font-family: Comfortaa;
-  src: url(./Comfortaa-Bold.woff) format("woff"),
-    url(./Comfortaa-Bold.woff2) format("woff2"),
-    url(./Comfortaa-Bold.ttf) format("ttf");
-  font-weight: bold;
-  font-display: swap;
-}
