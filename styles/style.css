@@ -6,58 +6,61 @@
 }
 
 .text-accent__color_international-orange {
-  color: #FF530E
+  color: #ff530e;
 }
 
 .text-accent__color_selective-yellow {
-  color: #FEBC00
+  color: #febc00;
 }
 
 .text-accent__color_dark-lime {
-  color: #01AF00
+  color: #01af00;
 }
 
 .text-accent__color_pure-blue {
-  color: #009DE2
+  color: #009de2;
 }
 
 .text-accent__color_moderate-red {
-  color: #CF5935
+  color: #cf5935;
 }
 
 .text-accent__color_vivid-orange {
-  color: #EF9C1D
+  color: #ef9c1d;
 }
 
 .text-accent__color_bright-orange {
-  color: #ED8738
+  color: #ed8738;
 }
 
 .text-accent__color_pale-blue {
-  color: #A4BCFF
+  color: #a4bcff;
 }
 
 .text-accent__color_moderate-green {
-  color: #94CF40
+  color: #94cf40;
 }
 
 .text-accent__color_soft-blue {
-  color: #4FADF7
+  color: #4fadf7;
 }
-
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1480px;
+  width: 1480px;
   min-height: 134px;
   padding: 0 120px;
-  background-color: #4fadf7;
+  background-color: transparent;
   background-image: url(../images/background-header.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: fixed;
+  top: 0;
+  left: calc(50% - 739.5px);
+  z-index: 100;
 }
 
 .body__header {
@@ -107,8 +110,8 @@
   display: flex;
   justify-content: space-between;
   max-width: 1480px;
-  min-height: 600px;
-  padding: 40px 120px;
+  min-height: 734px;
+  padding: 174px 120px 40px;
   background-color: #4fadf7;
   background-image: url(../images/waves.svg);
   background-repeat: no-repeat;
@@ -126,7 +129,7 @@
   justify-content: space-between;
   align-items: start;
   gap: 10px;
-  max-width: 780px;
+  max-width: 760px;
   margin: 0 auto;
   padding: 0;
 }
@@ -141,7 +144,7 @@
 }
 
 .cover__description-text {
-  max-width: 570px;
+  max-width: 720px;
   color: #fff;
   font-weight: 500;
   font-size: 20px;
@@ -154,7 +157,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 330px;
+  max-width: 400px;
   padding: 0 0 20px;
   color: #fff;
   font-weight: 400;
@@ -174,15 +177,15 @@
 }
 
 .cover__list-item-tasty {
-  background-image: url(../images/smiling.svg);
+  background-image: url(../images/basket.svg);
 }
 
 .cover__list-item-vitamin {
-  background-image: url(../images/vitamin-c.svg);
+  background-image: url(../images/Truck.svg);
 }
 
 .cover__list-item-chemistry {
-  background-image: url(../images/molecule.svg);
+  background-image: url(../images/ListCheck.svg);
 }
 
 .cover__image {
@@ -194,7 +197,7 @@
 
 .about-company {
   max-width: 1480px;
-  padding: 86px 120px 0;
+  padding: 120px 120px 0;
 }
 
 .body__about-company {
@@ -227,7 +230,7 @@
 }
 
 .about-company__description {
-  max-width: 556px;
+  max-width: 585px;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
@@ -238,7 +241,7 @@
   max-width: 586px;
   height: 360px;
   border-radius: 10px;
-  padding: 38px 70px;
+  padding: 50px 70px;
   color: #f5f5f5;
   background-color: #ed8738;
 }
@@ -247,9 +250,27 @@
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
-  padding: 80px 32px 60px;
-  color: #f5f5f5;
+  padding: 50px 32px;
   background-color: #94cf40;
+  gap: 10px;
+}
+
+.about-company__text-block {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  max-width: 556px;
+}
+
+.about-company__philosophy {
+  font-size: 20px;
+  line-height: 150%;
+  font-family: Comfortaa, sans-serif;
+}
+
+.about-company__text-block > .about-company__description {
+  font-size: 17px;
+  line-height: 176%;
 }
 
 .about-company__video {
@@ -257,12 +278,13 @@
   height: 313px;
   border-radius: 10px;
   box-shadow: 22px -27px #ffbf00;
+  margin-top: 30px;
 }
 
 .products {
   max-width: 1480px;
   min-height: 700px;
-  padding: 86px 120px 0;
+  padding: 120px 120px 0;
   background-image: url(../images/waves2.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -306,6 +328,7 @@
   height: 320px;
   font-size: 18px;
   line-height: 139%;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,8 +344,8 @@
   position: relative;
   z-index: -2;
   max-width: 1480px;
-  min-height: 926px;
-  padding: 82px 120px 0;
+  min-height: 900px;
+  padding: 120px 120px 0;
   background-image: url(../images/waves3.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -338,8 +361,9 @@
   width: calc(100% - 240px);
   height: calc(100% - 82px);
   background-image: url(../images/noris_group.png);
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 65%;
 }
 
 .advantages__header {
@@ -347,7 +371,7 @@
   font-family: Comfortaa, sans-serif;
   font-weight: bold;
   font-size: 50px;
-  font-style: normal; 
+  font-style: normal;
   line-height: 50px;
 }
 
@@ -363,72 +387,162 @@
   max-width: 320px;
 }
 
-.advantages__list-item:nth-child(2n){
+.advantages__list-item:nth-child(2n) {
   justify-self: end;
   max-width: 300px;
 }
 
-.advantages__list-item:nth-child(4n+3),.advantages__list-item:nth-child(4n+4){
+.advantages__list-item:nth-child(4n + 3),
+.advantages__list-item:nth-child(4n + 4) {
   align-self: end;
 }
 
 .advantages__heading {
-font-family: 'Comfortaa';
-font-style: normal;
-font-weight: bold;
-font-size: 23px;
-line-height: 139%;
-padding: 0 80px 0 0;
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 139%;
+  padding: 0 80px 0 0;
 }
 
 .advantages__description {
-font-weight: 400;
-font-size: 16px;
-line-height: 200%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   max-width: 1480px;
-  padding: 82px 120px 0;
+  padding: 120px 120px 50px;
+  min-height: 451px;
 }
 
 .body__footer {
   margin: 0 auto;
 }
 
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .footer__header {
   font-family: Comfortaa, sans-serif;
   font-weight: bold;
   font-size: 50px;
-  font-style: normal; 
+  font-style: normal;
   line-height: 52px;
 }
 
-.address {
-  max-width: 244px;
-  padding: 3px 0 0;
-  color: #000;
+.footer__cooperation-info {
   font-weight: 400;
-  font-size: 18px;
-  font-style: normal;
-  line-height: 136%;
+  font-size: 17px;
+  line-height: 176%;
+  color: #f5f5f5;
+  background-color: #4fadf7;
+  border-radius: 10px;
+  padding: 40px 31px;
+  max-width: 650px;
 }
 
-.address__link {
-  border-bottom: 1px solid #000;
-  text-decoration: none;
+.footer__copyright {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+}
+
+.footer__copyright-year {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 213%;
+}
+
+.footer__contacts-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  justify-content: space-between;
 }
 
 .footer__social-list {
   display: flex;
   justify-content: space-between;
-  min-width: 240px;
+  min-width: 500px;
   list-style: none;
 }
 
 .footer__social-list-item {
-  width: 48px;
-  height: 48px;
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-color: #4FADF7;
+  border-radius: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-list-item:nth-of-type(1) {
+  background-color: #fff;
+  width: 300px;
+  justify-content: start;
+}
+
+.footer__social-list-item:nth-of-type(3) {
+  background-color: #94CF40;
+}
+
+.footer__social-list-item:nth-of-type(4) {
+  background-color: #ED8738;
+}
+
+.footer__social-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.footer__social-icon:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+}
+
+.address {
+  min-width: 520px;
+  min-height: 75px;
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 178%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.adress__links, .address__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.address__link, .address__city {
+  text-decoration: none;
+  padding: 0 0 0 48px;
+  background-image: url(../images/email.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+
+.address__link:nth-of-type(2) {
+  background-image: url(../images/phone-call.svg);
+}
+
+.address__city {
+  background-image: url(../images/placeholder.svg);
 }
