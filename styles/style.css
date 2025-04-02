@@ -308,9 +308,10 @@
 }
 
 .products__list-group {
-  display: flex;
+  display: grid;
   list-style: none;
   gap: 30px;
+  grid-template-columns: repeat(4, 232px);
 }
 
 .products__group-name {
@@ -412,22 +413,23 @@
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   max-width: 1480px;
   padding: 120px 120px 50px;
   min-height: 451px;
   gap: 20px;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "header header header header"
+    "info info links links "
+    "info info adress adress "
+    "copyright copyright adress adress";
+
 }
 
 .body__footer {
   margin: 0 auto;
-}
-
-.footer__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .footer__header {
@@ -436,6 +438,7 @@
   font-size: 50px;
   font-style: normal;
   line-height: 100%;
+  grid-area: header;
 }
 
 .footer__cooperation-info {
@@ -447,6 +450,7 @@
   border-radius: 10px;
   padding: 40px 31px;
   max-width: 650px;
+  grid-area: info;
 }
 
 .footer__copyright {
@@ -454,6 +458,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 213%;
+  grid-area: copyright;
 }
 
 .footer__copyright-year {
@@ -463,18 +468,12 @@
   line-height: 213%;
 }
 
-.footer__contacts-info {
-  display: flex;
-  flex-direction: column;
-  padding-top: 70px;
-  justify-content: space-between;
-}
-
 .footer__social-list {
   display: flex;
   justify-content: space-between;
   min-width: 500px;
   list-style: none;
+  grid-area: links;
 }
 
 .footer__social-list-item {
@@ -521,6 +520,8 @@
   line-height: 178%;
   display: flex;
   justify-content: space-between;
+  grid-area: adress;
+  align-items: end;
 }
 
 .adress__links, .address__info {
@@ -660,10 +661,6 @@
     padding: 25px 30px;
   }
 
-  .footer__contacts-info {
-    padding-top: 65px;
-  }
-
   .footer__social-list {
     min-width: 420px;
   }
@@ -689,6 +686,7 @@
     gap: 10px;
     min-width: 420px;
     font-size: 16px;
+    align-items: start;
   }
 
 }
@@ -717,7 +715,6 @@
   }
   
   .cover__image {
-    object-fit: cover;
     width: 290px;
     margin-top: 30px;
   }
@@ -731,7 +728,7 @@
   }
 
   .about-company__info {
-    gap: 10px;
+    min-height: 470px;
   }
 
   .about-company__description {
@@ -740,47 +737,63 @@
 
   .about-company__description_orange {
     max-width: 350px;
-    padding: 38px 50px;
+    padding: 55px 40px;
   }
 
   .about-company__mission {
     background-size: 330px;
   }
 
-  .about-company__philosophy {
-    font-size: 16px;
+  .about-company__extra-info {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .about-company__extra-info {
-    padding: 30px 32px;
+  .about-company__text-block {
+    max-width: 100%;
+    gap: 10px
   }
 
   .about-company__text-block > .about-company__description {
-    font-size: 14px;
+    max-width: 100%;
   }
 
   .about-company__video {
-    width: 275px;
-    height: 145px;
-    margin-top: 70px;
+    width: 640px;
+    height: 360px;
+    margin: 30px auto 0;
   }
 
   .products {
-    max-width: 100%;
-    padding: 120px 100px 0;
+    padding: 120px 50px 0;
+    background-repeat: space;
+    background-size: contain;
   }
 
   .products__header {
-    font-size: 40px;
+    font-size: 30px;
+  }
+
+  .products__group-name {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+
+  .products__list-group {
+    display: grid;
+    list-style: none;
+    gap: 15px;
+    grid-template-columns: repeat(3, 223px);
   }
 
   .advantages {
-    max-width: 100%;
-    padding: 120px 100px 0;
+    padding: 120px 50px 0;
+    background-size: contain;
+    background-position: center;
   }
 
   .advantages__header {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .advantages__list {
@@ -801,24 +814,29 @@
   }
 
   .footer {
-    max-width: 100%;
-    padding: 120px 100px 50px;
+    padding: 120px 50px 50px;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+    "header "
+    "links "
+    "info"
+    "adress "
+    "copyright";
   }
 
   .footer__header {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .footer__cooperation-info {
+    max-width: 100%;
     padding: 25px 30px;
   }
 
-  .footer__contacts-info {
-    padding-top: 65px;
-  }
-
   .footer__social-list {
-    min-width: 420px;
+    margin-top: 20px;
+    gap: 20px
   }
 
   .footer__social-list-item {
@@ -828,7 +846,7 @@
   }
 
   .footer__social-list-item:first-of-type {
-    width: 250px;
+    width: 80%;
   }
 
 
@@ -838,10 +856,11 @@
   }
 
   .address {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    gap: 20px;
     min-width: 420px;
     font-size: 16px;
+    justify-content: start;
   }
 
 }
