@@ -122,6 +122,10 @@
   transition: opacity 1s ease;
 }
 
+.header__button-nav_opened {
+  background-image: url(../images/Close-Icon.svg);
+}
+
 .header__button-nav:hover {
   opacity: 0.8;
 }
@@ -588,12 +592,12 @@
 .popup_opened {
   display: flex;
   visibility: visible;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .popup__container {
   width: 100%;
-  height: 40%;
+  height: 100%;
   background-color: #fff;
   z-index: 2;
   align-items: center;
