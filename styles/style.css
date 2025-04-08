@@ -128,10 +128,16 @@
 
 .cover {
   position: relative;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "cover-title photo"
+    "cover-description photo"
+    "list photo";
   max-width: 1480px;
-  min-height: 734px;
+  height: 100%;
   padding: 174px 120px 40px;
   background-color: #4fadf7;
   background-image: url(../images/waves.svg);
@@ -144,16 +150,6 @@
   margin: 0 auto;
 }
 
-.cover__description {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  gap: 10px;
-  max-width: 760px;
-  padding: 0;
-}
-
 .cover__title {
   width: 100%;
   color: #fff;
@@ -161,9 +157,10 @@
   font-weight: bold;
   font-size: 50px;
   line-height: 130%;
+  grid-area: cover-title;
 }
 
-.cover__description-text {
+.cover__description {
   max-width: 720px;
   color: #fff;
   font-weight: 500;
@@ -171,6 +168,7 @@
   font-style: normal;
   line-height: 160%;
   text-align: left;
+  grid-area: cover-description;
 }
 
 .cover__list {
@@ -186,6 +184,7 @@
   line-height: 167%;
   text-align: left;
   list-style: none;
+  grid-area: list;
 }
 
 .cover__list-item {
@@ -213,6 +212,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  grid-area: photo;
 }
 
 .about-company {
@@ -259,7 +259,7 @@
 
 .about-company__description_orange {
   max-width: 586px;
-  height: 360px;
+  height: 100%;
   border-radius: 10px;
   padding: 50px 70px;
   color: #f5f5f5;
@@ -358,7 +358,7 @@
 
 .product-card__image {
   height: 270px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -684,7 +684,6 @@
 
   .cover {
     max-width: 100%;
-    min-height: 650px;
     padding: 150px 100px 40px;
   }
 
@@ -692,7 +691,7 @@
     font-size: 40px;
   }
 
-  .cover__description-text {
+  .cover__description {
     font-size: 18px;
   }
 
@@ -826,7 +825,6 @@
   }
 
   .cover {
-    min-height: 570px;
     padding: 130px 50px 20px;
     background-size: contain;
   }
@@ -835,7 +833,7 @@
     font-size: 30px;
   }
 
-  .cover__description-text {
+  .cover__description {
     font-size: 16px;
   }
 
@@ -919,19 +917,6 @@
     font-size: 30px;
   }
 
-  .advantages__overlay {
-    background-size: 55%;
-    background-position: center;
-  }
-
-  .advantages__list-item {
-    max-width: 300px;
-  }
-
-  .advantages__list-item:nth-child(2n) {
-    max-width: 280px;
-  }
-
   .footer {
     padding: 120px 50px 50px;
     grid-template-columns: repeat(1, auto);
@@ -950,7 +935,6 @@
 
   .footer__cooperation-info {
     max-width: 100%;
-    padding: 25px 30px;
   }
 
   .footer__social-list {
@@ -976,9 +960,6 @@
   .address {
     flex-direction: row;
     gap: 20px;
-    min-width: 420px;
-    font-size: 16px;
-    justify-content: start;
   }
 }
 
@@ -1008,7 +989,6 @@
   }
 
   .cover {
-    min-height: 500px;
     padding: 100px 20px 20px;
   }
 
@@ -1016,7 +996,7 @@
     font-size: 25px;
   }
 
-  .cover__description-text {
+  .cover__description {
     font-size: 16px;
   }
 
@@ -1094,11 +1074,10 @@
   .advantages__list {
     grid-template-columns: repeat(1, 1fr);
     min-height: 430px;
-    padding: 30px 0 0;
+    padding-top: 30px;
   }
 
   .advantages__overlay {
-    background-size: 55%;
     background-position-y: bottom;
     background-position-x: calc(50% + 80px);
   }
@@ -1138,41 +1117,53 @@
   }
 
   .cover {
-    min-height: 570px;
-    padding: 90px 20px 20px;
-    flex-direction: column;
-    align-items: center;
+    padding-top: 90px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "cover-title"
+      "cover-description"
+      "photo"
+      "list";
   }
+  
 
   .cover__title {
     font-size: 20px;
     text-align: center;
   }
-
-  .cover__description {
-    gap: 20px;
-  }
   
-  .cover__description-text {
-    font-size: 16px;
+  .cover__description {
     text-align: center;
+  }
+
+  .cover__list {
+    font-size: 13px;
+  }
+
+  .cover__list-item {
+    padding: 0 0 0 40px
   }
 
   .cover__image {
     width: 290px;
-    margin-top: 10px;
+    margin: 0 auto;
   }
 
   .about-company {
-    padding: 120px 50px 0px;
+    padding: 90px 0 0;
   }
 
   .about-company__header {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .about-company__info {
     min-height: 470px;
+    flex-direction: column;
+    gap: 0;
   }
 
   .about-company__description {
@@ -1180,17 +1171,22 @@
   }
 
   .about-company__description_orange {
-    max-width: 350px;
-    padding: 55px 40px;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #94cf40;
+    border-radius: 0;
+    color: #000;
+    text-align: center;
   }
 
   .about-company__mission {
-    background-size: 330px;
+    padding: 0 20px 130px;
+    background-position: bottom right;
   }
 
   .about-company__extra-info {
-    flex-direction: column;
-    padding: 20px;
+    border-radius: 0;
+    background-color: #ed8738;
   }
 
   .about-company__text-block {
@@ -1203,106 +1199,82 @@
   }
 
   .about-company__video {
-    width: 640px;
-    height: 360px;
-    margin: 30px auto 0;
-  }
-
-  .products {
-    padding: 120px 50px 0;
-    background-repeat: space;
-    background-size: contain;
+    width: 280px;
+    height: 158px;
+    margin: 15px auto 0;
+    box-shadow: 15px -15px #ffbf00;
   }
 
   .products__header {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .products__group-name {
-    font-size: 20px;
-    padding-top: 30px;
+    font-size: 18px;
+    padding-top: 20px;
   }
 
   .products__list-group {
-    display: grid;
-    list-style: none;
-    gap: 15px;
-    grid-template-columns: repeat(3, 223px);
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product-card {
+    font-size: 15px;
   }
 
   .advantages {
-    padding: 120px 50px 0;
+    padding-bottom: 150px;
     background-size: contain;
     background-position: center;
   }
 
   .advantages__header {
-    font-size: 30px;
-  }
-
-  .advantages__list {
-    min-height: 650px;
+    font-size: 20px;
   }
 
   .advantages__overlay {
-    background-size: 55%;
-    background-position: center;
-  }
-
-  .advantages__list-item {
-    max-width: 300px;
-  }
-
-  .advantages__list-item:nth-child(2n) {
-    max-width: 280px;
+    width: calc(100% - 40px);
+    background-size: 150px;
+    background-position-x: calc(50% - 20px);
   }
 
   .footer {
-    padding: 120px 50px 50px;
-    grid-template-columns: repeat(1, auto);
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas:
-      "header "
-      "links "
-      "info"
-      "adress "
-      "copyright";
+    padding: 90px 20px 50px;
   }
 
   .footer__header {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .footer__cooperation-info {
-    max-width: 100%;
-    padding: 25px 30px;
+    padding: 10px 15px;
   }
 
   .footer__social-list {
-    margin-top: 20px;
-    gap: 20px;
+    width: 100%;
+    min-width: 280px;
   }
 
   .footer__social-list-item {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
   }
 
   .footer__social-list-item:first-of-type {
-    width: 80%;
+    width: 50%;
   }
 
   .footer__social-icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .address {
-    flex-direction: row;
-    gap: 20px;
-    min-width: 420px;
-    font-size: 16px;
+    flex-direction: column;
+    width: 100%;
     justify-content: start;
+    min-width: 280px;
   }
 }
