@@ -16,10 +16,10 @@
   </head>
   <body class="body">
     <header class="header body__header">
-      <a class="header__logo"
+      <a class="header__logo" href="#"
         ><img
           class="header__logo-image"
-          alt="Логотип проекта Оно тебе надо"
+          alt="Логотип компании Норис"
           src="./images/logo.svg"
       /></a>
       <nav class="header__menu">
@@ -121,45 +121,51 @@
         <ul class="products__list">
           <li class="products__list-item">
             <h3 class="products__group-name">ЧИПСЫ ИЗ НОРИ</h3>
-            <ul class="products__list-group">
-              <li class="product-card text-accent__color_international-orange">
-                <img
-                  src="./images/Chips-kimchi.png"
-                  class="product-card__image"
-                  alt="Чипсы из нори со вкусом Кимчи"
-                />
-                Кимчи
-              </li>
-              <li class="product-card text-accent__color_selective-yellow">
-                <img
-                  src="./images/chips-oil.png"
-                  class="product-card__image"
-                  alt="Чипсы из нори со вкусом Кунжутного масла"
-                />
-                Кунжутное масло
-              </li>
-              <li class="product-card text-accent__color_dark-lime">
-                <img
-                  src="./images/chips-vasabi.png"
-                  class="product-card__image"
-                  alt="Чипсы из нори со вкусом Васаби"
-                />
-                Васаби
-              </li>
-              <li class="product-card text-accent__color_pure-blue">
-                <img
-                  src="./images/chips-salt.png"
-                  class="product-card__image"
-                  alt="Чипсы из нори со вкусом Морской соли"
-                />
-                Морская соль
-              </li>
-            </ul>
+            <div class="products__slider products__slider-chips">
+              <button class="products__slider-button products__slider-button_previous products__slider-chips-button_previous" type="button"></button>
+              <ul class="products__list-group">
+                <li class="product-card product-card_chips product-card_hidden text-accent__color_international-orange">
+                  <img
+                    src="./images/Chips-kimchi.png"
+                    class="product-card__image"
+                    alt="Чипсы из нори со вкусом Кимчи"
+                  />
+                  Кимчи
+                </li>
+                <li class="product-card product-card_chips product-card_hidden text-accent__color_selective-yellow">
+                  <img
+                    src="./images/chips-oil.png"
+                    class="product-card__image"
+                    alt="Чипсы из нори со вкусом Кунжутного масла"
+                  />
+                  Кунжутное масло
+                </li>
+                <li class="product-card product-card_chips product-card_hidden text-accent__color_dark-lime">
+                  <img
+                    src="./images/chips-vasabi.png"
+                    class="product-card__image"
+                    alt="Чипсы из нори со вкусом Васаби"
+                  />
+                  Васаби
+                </li>
+                <li class="product-card product-card_chips product-card_hidden text-accent__color_pure-blue">
+                  <img
+                    src="./images/chips-salt.png"
+                    class="product-card__image"
+                    alt="Чипсы из нори со вкусом Морской соли"
+                  />
+                  Морская соль
+                </li>
+              </ul>
+              <button class="products__slider-button products__slider-button_next products__slider-chips-button_next" type="button"></button>
+            </div>
           </li>
           <li class="products__list-item">
             <h3 class="products__group-name">Азиатская лапша</h3>
+            <div class="products__slider products__slider_pasta">
+              <button class="products__slider-button products__slider-button_previous products__slider-pasta-button_previous" type="button"></button>
             <ul class="products__list-group">
-              <li class="product-card text-accent__color_moderate-red">
+              <li class="product-card product-card_pasta product-card_hidden text-accent__color_moderate-red">
                 <img
                   src="./images/soba.png"
                   class="product-card__image"
@@ -167,7 +173,7 @@
                 />
                 Соба
               </li>
-              <li class="product-card text-accent__color_vivid-orange">
+              <li class="product-card product-card_pasta product-card_hidden text-accent__color_vivid-orange">
                 <img
                   src="./images/Udon.png"
                   class="product-card__image"
@@ -176,6 +182,8 @@
                 Удон
               </li>
             </ul>
+            <button class="products__slider-button products__slider-button_next products__slider-pasta-button_next" type="button"></button>
+            </div>
           </li>
         </ul>
       </section>
@@ -242,7 +250,7 @@
             ><img
               class="footer__logo"
               src="./images/logo-black.svg"
-              alt="Веб-сайт компании"
+              alt="Логотип компании Норис"
           /></a>
         </li>
         <li class="footer__social-list-item">
